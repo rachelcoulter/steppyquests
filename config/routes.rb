@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :quests do
-    resources :scenes
+    resources :scenes do
+      resources :steps
+    end
   end
 end

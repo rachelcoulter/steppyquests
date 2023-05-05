@@ -61,7 +61,7 @@ class QuestsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_quest
       @quest = Quest.find(params[:id])
-    end
+    end 
 
     # Only allow a list of trusted parameters through.
     def quest_params

@@ -8,6 +8,11 @@ class ScenesController < ApplicationController
       redirect_to quest_path(@quest)
     end
   
+    def show
+      
+      @scene = Scene.find(params[:id])
+    end
+
     private
       def scene_params
         params.require(:scene).permit(:title, :body)
