@@ -13,6 +13,7 @@
 
     <p>
       <strong>choice:</strong>
+      <%= link_to step.choice, quest_scene_path(@scene.quest, step.target_scene) %>
       <%= step.choice %>
       <%= step.target_scene %>
     </p>
