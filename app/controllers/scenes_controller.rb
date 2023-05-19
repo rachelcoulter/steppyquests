@@ -14,8 +14,7 @@ class ScenesController < ApplicationController
     end
 
     def destroy
-      puts "params = #{params}"
-      @scene = Scene.find(params[:id])
+      @scene = Scene.find(params[:scene_id])
       @scene.destroy
   
       respond_to do |format|

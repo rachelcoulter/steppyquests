@@ -19,6 +19,15 @@
     </p>
 <% end %>
 
+<%= @scene.steps %>
+<%= @scene.steps.count %>
+
+<% @scene.steps.each do |step| %>
+  <p>
+    <%= button_to "Destroy stephen #{step.choice}", url_for([@scene.quest, @scene, step]), method: :delete %>
+  </p>
+<% end %>
+
 <h2>Add a step:</h2>
 <%= form_with model: [ @scene.quest, @scene, @scene.steps.build ] do |form| %>
   <p>
