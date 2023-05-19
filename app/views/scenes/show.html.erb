@@ -34,5 +34,9 @@
   <p>
     <%= form.submit %>
   </p>
+
 <% end %>
+
+<%= button_to "Destroy this scene", quest_scene_path(@scene.quest, @scene), method: :delete %>
+
 </html>
